@@ -1,0 +1,19 @@
+Login Form
+<form [formGroup]="loginForm" (submit)="login()">
+  <div>
+    <input type="text" formControlName="userName" placeholder="User Name">
+  </div>
+  <div>
+    <input type="text" formControlName="password" placeholder="User Name">
+  </div>
+  <div>
+    <button type="submit">Login</button>
+  </div>
+</form>
+
+
+<div *ngIf="user$ | async as user ">
+  <div>
+    {{user | json }}
+  </div>
+</div>
